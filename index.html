@@ -11,6 +11,10 @@
         padding: 0;
         box-sizing: border-box;
       }
+      a {
+        text-decoration: none;
+        color: white;
+      }
       .left {
         position: absolute;
         width: 50px;
@@ -37,16 +41,43 @@
         transform: rotate(45deg);
         top: 50px;
       }
+
       .heart {
         position: relative;
         left: 200px;
         top: 100px;
         width: 100px;
         height: 100px;
-        animation: heart 0.5s infinite alternate;
+        animation: stop 0.5s infinite alternate;
       }
       .heart div {
         background-color: red;
+      }
+      button {
+        border: none;
+        background-color: #0282b9;
+        border-radius: 4px;
+        color: white;
+        width: 88px;
+      }
+      .start {
+        position: absolute;
+        height: 30px;
+        top: 270px;
+        left: 100px;
+      }
+      .stop {
+        position: absolute;
+        height: 30px;
+        top: 270px;
+        left: 230px;
+      }
+      .run {
+        position: absolute;
+        width: 140px;
+        height: 40px;
+        top: 300px;
+        left: 140px;
       }
 
       @keyframes heart {
@@ -57,6 +88,14 @@
           transform: scale(1.5);
         }
       }
+      @keyframes stop {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
   </head>
   <body>
@@ -65,5 +104,11 @@
       <div class="right"></div>
       <div class="bottom"></div>
     </div>
+    <button class="start">心动一下</button>
+    <button class="stop">心动停止</button>
+    <button class="run">
+      <a href="https://www.douyin.com">不理你了，我去刷抖音了</a>
+    </button>
+    <script src="main.js"></script>
   </body>
 </html>
