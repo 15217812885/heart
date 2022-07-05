@@ -3,11 +3,11 @@ let start = document.querySelector(".start")
 let stop = document.querySelector(".stop")
      
 console.dir(heart);
-      let n=0;
+      let n=1;
       let status = false;
       heart.onclick = () =>{
-          n=n+1;
           alert("爱你"+n+"遍")
+          n=n+1
         }  
      start.onclick = () =>{
         status = true;
